@@ -28,12 +28,80 @@
       }
     </style>
   </head>
-  <body class="bg-[#F7F8F8]">
-    <section id="seat-layout" class="mt-4">
+  <body >
+
+    <header class="mb-4">
+      <div class="navbar bg-base-100 container">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl lg:text-4xl text-[#131318] gap-0"
+            >AT-Ticket</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="text-[#FF4240]">Home</a></li>
+            <li><a class="text-[#424247]">About</a></li>
+            <li><a class="text-[#424247]">Destination</a></li>
+            <li><a class="text-[#424247]">Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="text-[#1DD100] bg-[#1DD10019] font-medium rounded-lg text-sm w-auto px-5 py-2.5 text-center flex gap-2"
+            >Bus<img src="images/bus-icon.png" alt=""></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section id="banner">
+        <div class="hero min-h-screen container" style="background-image: url(images/banner.png);">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div>
+              <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> AT Paribahan</h1>
+              <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+              <button class="btn btn-primary" onclick="scrollToSection('seat-layout')">Buy Tickets</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="seat-layout">
         <dialog id="my_modal_1" class="modal">
           <div class="modal-box">
             <h3 class="font-bold text-lg">Hello!</h3>
-            <p class="py-4">You can't book more than 4 tickets.</p>
+            <p class="py-4">You can't book more than 4 tickets at a time</p>
             <div class="modal-action">
               <form method="dialog">
                 <button class="btn">Close</button>
@@ -41,238 +109,373 @@
             </div>
           </div>
         </dialog>
-      <div class="container">
-        <div class="grid grid-cols-2 gap-4 p-8 rounded-2xl bg-white">
-          <div class="grid grid-cols-2 gap-4" id="seatButtonsContainer">
-            <div class="col-span-2">
-              <h4 class="text-[#030712]-600 text-2xl">Select your seat</h4>
-              <hr class="border-dashed mt-2 bg-[#03071233]" />
-              <div class="flex justify-between mt-2">
-                <div class="flex gap-2">
-                  <img src="images/seat-gray.png" alt="" />
-                  <p class="text-[#03071280] text-xl">Available</p>
-                </div>
-                <div class="flex gap-2">
-                  <img src="images/seat-green-filled.png" alt="" />
-                  <p class="text-[#1DD100] text-xl">Selected</p>
-                </div>
-              </div>
-
-              <hr class="border-dashed mt-2 bg-[#03071233]" />
-
-              <div class="flex justify-end mt-2">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  <img src="images/Vector.png" alt="" />
-                </button>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-4">
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">A</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  A1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  A2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">B</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  B1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  B2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">C</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  C1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  C2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">D</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  D1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  D2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">E</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  E1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  E2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">F</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  F1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  F2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">G</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  G1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  G2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">H</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  H1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  H2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">I</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  I1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  I2
-                </button>
-              </div>
-              <div class="grid grid-cols-3 gap-4 items-center">
-                <p class="text-center">J</p>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  J1
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  J2
-                </button>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-4">
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  A3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  A4
-                </button>
-              </div>
-
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  B3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  B4
-                </button>
-              </div>
-
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  C3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  C4
-                </button>
-              </div>
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  D3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  D4
-                </button>
-              </div>
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  E3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  E4
-                </button>
-              </div>
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  F3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  F4
-                </button>
-              </div>
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  G3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  G4
-                </button>
-              </div>
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  H3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  H4
-                </button>
-              </div>
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  I3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  I4
-                </button>
-              </div>
-              <div class="grid grid-cols-2 gap-4 items-center">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  J3
-                </button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                  J4
-                </button>
-              </div>
+  
+        <dialog id="my_modal_2" class="modal">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">Hello!</h3>
+            <p class="py-4">Invalid Coupon</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close</button>
+              </form>
             </div>
           </div>
-
-          <div class="flex flex-col gap-4 border-4 p-4">
-            <h4 class="text-[#030712]-600 text-2xl">Select your seat</h4>
-            <hr class="border-dashed bg-[#03071233]" />
-            <div class="overflow-x-auto bg-[#F7F8F8] rounded-lg">
-              <table class="table mx-auto border-none" id="seatTable">
-                <!-- head -->
-                <thead>
-                  <tr>
-                    <th>Seat</th>
-                    <th>Class</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
+        </dialog>
+  
+  
+        <dialog id="my_modal_3" class="modal">
+          <div class="modal-box flex flex-col justify-center items-center">
+            <img src="images/success.png" alt="" width="50px" height="50px">
+            <h3 class="font-bold text-lg">Success</h3>
+            <p class="py-4">Thank you for Booking Our Bus Seats. 
+            </p>
+            <p class="py-4">We are working hard to find the best service and deals for you. 
+            </p>
+            <p>Shortly you will find a confirmation in your email.</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close</button>
+              </form>
             </div>
-
-            <div class="flex justify-between">
-              <p class="font-inter font-semibold">Total Price</p>
-              <p class="font-inter font-semibold">
-                BDT <span id="totalPrice">0</span>
-              </p>
+          </div>
+        </dialog>
+        <div class="container border-4">
+          <div class="grid grid-cols-2 gap-4 p-8 rounded-2xl bg-white">
+            <div class="grid grid-cols-2 gap-4" id="seatButtonsContainer">
+              <div class="col-span-2">
+                <h4 class="text-[#030712]-600 text-2xl">Select your seat</h4>
+                <hr class="border-dashed mt-2 bg-[#03071233]" />
+                <div class="flex justify-between mt-2">
+                  <div class="flex gap-2">
+                    <img src="images/seat-gray.png" alt="" />
+                    <p class="text-[#03071280] text-xl">Available</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <img src="images/seat-green-filled.png" alt="" />
+                    <p class="text-[#1DD100] text-xl">Selected</p>
+                  </div>
+                </div>
+  
+                <hr class="border-dashed mt-2 bg-[#03071233]" />
+  
+                <div class="flex justify-end mt-2">
+                  <button
+                    class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-disabled"
+                  >
+                    <img src="images/Vector.png" alt="" />
+                  </button>
+                </div>
+              </div>
+  
+              <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">A</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    A1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    A2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">B</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    B1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    B2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">C</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    C1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    C2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">D</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    D1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    D2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">E</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    E1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    E2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">F</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    F1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    F2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">G</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    G1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    G2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">H</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    H1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    H2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">I</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    I1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    I2
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                  <p class="text-center">J</p>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    J1
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    J2
+                  </button>
+                </div>
+              </div>
+  
+              <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    A3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    A4
+                  </button>
+                </div>
+  
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    B3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    B4
+                  </button>
+                </div>
+  
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    C3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    C4
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    D3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    D4
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    E3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    E4
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    F3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    F4
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    G3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    G4
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    H3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    H4
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    I3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    I4
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 items-center">
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    J3
+                  </button>
+                  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                    J4
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="flex flex-col gap-4 border-4 p-4">
+              <h4 class="text-[#030712]-600 text-2xl">Select your seat</h4>
+              <hr class="border-dashed bg-[#03071233]" />
+              <div
+                class="flex flex-col gap-4 bg-[#F7F8F8] p-4 rounded-lg"
+                id="priceContainer"
+              >
+                <div class="overflow-x-auto bg-[#F7F8F8] rounded-lg">
+                  <table class="table mx-auto border-none" id="seatTable">
+                    <thead>
+                      <tr>
+                        <th class="relative">
+                          <span
+                            class="bg-[#1DD100] text-xs font-medium text-white text-center p-0.5 leading-none rounded-full px-2 absolute left-auto top-0 right-20"
+                            id="seatCount"
+                            >0</span
+                          >
+  
+                          Seat
+                        </th>
+                        <th>Class</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+  
+                <div class="flex justify-between">
+                  <p class="font-inter font-semibold">Total Price</p>
+                  <p class="font-inter font-semibold">
+                    BDT <span id="totalPrice">0</span>
+                  </p>
+                </div>
+  
+                <div id="couponForm">
+                  <form>
+                    <label
+                      for="search"
+                      class="mb-2 text-sm font-medium text-gray-900 sr-only"
+                      >Search</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="search"
+                        id="couponInput"
+                        class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Have any coupon?"
+                        disabled
+                      />
+                      <button
+                        id="couponApplyBtn"
+                        type="button"
+                        class="text-white absolute end-2.5 bottom-2.5 bg-[#1DD100] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+                        disabled
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </form>
+                </div>
+  
+                <div class="flex justify-between">
+                  <p class="font-inter font-semibold">Grand Total</p>
+                  <p class="font-inter font-semibold">
+                    BDT <span id="grandTotal">0</span>
+                  </p>
+                </div>
+              </div>
+  
+              <form>
+                
+                <div class="mb-5">
+                  <label
+                    for="name"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Passenger Name<sup>*</sup></label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    required placeholder="Enter your name"
+                  />
+                </div>
+  
+  
+                <div class="mb-5">
+                  <label
+                    for="phone number"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Phone Number<sup>*</sup></label
+                  >
+                  <input
+                    type="number"
+                    id="phoneNumber"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+  
+                <div class="mb-5">
+                  <label
+                    for="email"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Email ID</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    placeholder="Enter your email id"
+                  />
+                </div>
+                
+                <button
+                  type="button" id="nextBtn"
+                  class="text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center"
+                >
+                  Next
+                </button>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+    </main>
+    
 
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
