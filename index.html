@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AT Paribahan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .container {
+        max-width: 1170px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F7F8F8]">
+    <section id="seat-layout" class="mt-4">
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">Hello!</h3>
+            <p class="py-4">You can't book more than 4 tickets.</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      <div class="container">
+        <div class="grid grid-cols-2 gap-4 p-8 rounded-2xl bg-white">
+          <div class="grid grid-cols-2 gap-4" id="seatButtonsContainer">
+            <div class="col-span-2">
+              <h4 class="text-[#030712]-600 text-2xl">Select your seat</h4>
+              <hr class="border-dashed mt-2 bg-[#03071233]" />
+              <div class="flex justify-between mt-2">
+                <div class="flex gap-2">
+                  <img src="images/seat-gray.png" alt="" />
+                  <p class="text-[#03071280] text-xl">Available</p>
+                </div>
+                <div class="flex gap-2">
+                  <img src="images/seat-green-filled.png" alt="" />
+                  <p class="text-[#1DD100] text-xl">Selected</p>
+                </div>
+              </div>
+
+              <hr class="border-dashed mt-2 bg-[#03071233]" />
+
+              <div class="flex justify-end mt-2">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  <img src="images/Vector.png" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">A</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  A1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  A2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">B</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  B1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  B2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">C</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  C1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  C2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">D</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  D1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  D2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">E</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  E1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  E2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">F</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  F1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  F2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">G</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  G1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  G2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">H</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  H1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  H2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">I</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  I1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  I2
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-4 items-center">
+                <p class="text-center">J</p>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  J1
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  J2
+                </button>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  A3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  A4
+                </button>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  B3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  B4
+                </button>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  C3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  C4
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  D3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  D4
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  E3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  E4
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  F3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  F4
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  G3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  G4
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  H3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  H4
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  I3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  I4
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-4 items-center">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  J3
+                </button>
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  J4
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4 border-4 p-4">
+            <h4 class="text-[#030712]-600 text-2xl">Select your seat</h4>
+            <hr class="border-dashed bg-[#03071233]" />
+            <div class="overflow-x-auto bg-[#F7F8F8] rounded-lg">
+              <table class="table mx-auto border-none" id="seatTable">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    <th>Seat</th>
+                    <th>Class</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <div class="flex justify-between">
+              <p class="font-inter font-semibold">Total Price</p>
+              <p class="font-inter font-semibold">
+                BDT <span id="totalPrice">0</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
