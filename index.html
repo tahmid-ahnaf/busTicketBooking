@@ -85,13 +85,13 @@
     <main>
 
       <section id="banner">
-        <div class="hero min-h-screen container" style="background-image: url(images/banner.png);">
+        <div class="hero min-h-screen container rounded-3xl overflow-hidden " style="background-image: url(images/banner.png);">
           <div class="hero-overlay bg-opacity-60"></div>
           <div class="hero-content text-center text-neutral-content">
-            <div>
-              <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> AT Paribahan</h1>
-              <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-              <button class="btn btn-primary" onclick="scrollToSection('seat-layout')">Buy Tickets</button>
+            <div class="flex flex-col items-center gap-3">
+              <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> <span class="text-[#1DD100]">AT Paribahan</span></h1>
+              <p class="mb-5 max-w-3xl font-inter">Embark on a seamless and comprehensive travel experience with AT Paribahan, offering end-to-end solutions for your journey needs. Discover unparalleled convenience and reliability as AT Paribahan takes you on a hassle-free journey from start to finish.</p>
+              <button class="btn max-w-fit bg-[#1DD100] text-black outline-none" onclick="scrollToSection('seat-layout')">Buy Tickets</button>
             </div>
           </div>
         </div>
@@ -167,7 +167,7 @@
                 </div>
               </div>
   
-              <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-4 seatButtons">
                 <div class="grid grid-cols-3 gap-4 items-center">
                   <p class="text-center">A</p>
                   <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
@@ -260,7 +260,7 @@
                 </div>
               </div>
   
-              <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-4 seatButtons">
                 <div class="grid grid-cols-2 gap-4 items-center">
                   <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
                     A3

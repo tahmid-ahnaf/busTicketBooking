@@ -9,7 +9,8 @@
 
 
 const seatButtonsContainer = document.getElementById("seatButtonsContainer");
-let seatButtons = document.getElementsByClassName("btn");
+// let seatButtons = document.getElementsByClassName("btn");
+let seatButtons = document.querySelectorAll('.seatButtons .btn');
 let selectedButtonsCount = 0;
 
 
@@ -90,7 +91,6 @@ document.getElementById("couponApplyBtn").addEventListener("click", function(eve
 
   else
   {
-    // document.getElementById("my_modal_1").classList.add("hidden")
     document.getElementById("my_modal_2").showModal()
   }
 })
