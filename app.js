@@ -15,13 +15,20 @@ let selectedButtonsCount = 0;
 
 
 for (let i = 0; i < seatButtons.length; i++) {
+  
     seatButtons[i].addEventListener("click", function() {
+      
       if (selectedButtonsCount < 4 && !seatButtons[i].classList.contains("bg-[#1DD100]")) {
         seatButtons[i].classList.add("text-white", "bg-[#1DD100]");
+        
         selectedButtonsCount++;
+
+        
 
         document.getElementById("seatCount").innerText = selectedButtonsCount;
         addTableData("seatTable", seatButtons[i].innerText);
+
+        document.getElementById("seatLeftCount").innerText = (40-selectedButtonsCount) + " Seats Left";
 
         totalPrice = parseInt(document.getElementById("totalPrice").innerText)
         totalPrice = totalPrice + 550;
@@ -96,10 +103,32 @@ document.getElementById("couponApplyBtn").addEventListener("click", function(eve
 })
 
 
-document.getElementById("nextBtn").addEventListener("click", function(event){
+function checkValues()
+{
+  if(selectedButtonsCount>0 && document.getElementById("phoneNumber").value.trim() !== '')
+{
+  nextBtn = document.getElementById("nextBtn");
+  nextBtn.classList.replace("bg-gray-500", "bg-[#1DD100]");
+  removeAttributeById("nextBtn", "disabled");
+  if(!nextBtn.hasEventListener)
+  {
+    nextBtn.addEventListener("click", function(){
 
-    document.getElementById("my_modal_3").showModal()
-})
+      document.getElementById("my_modal_3").showModal();
+  })
+
+  nextBtn.hasEventListener = true;
+
+  }
+  
+
+}
+
+}
+  
+
+
+
 
 
 function createDivElement(containerName, discount)
@@ -143,3 +172,8 @@ function scrollToSection(sectionId) {
       section.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+function reloadPage() {
+  location.reload();
+}
+
