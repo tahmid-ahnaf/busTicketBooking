@@ -102,6 +102,10 @@ document.getElementById("couponApplyBtn").addEventListener("click", function(eve
   }
 })
 
+phoneNumberInput = document.getElementById("phoneNumber");
+
+phoneNumberInput.addEventListener('input', checkValues);
+
 
 function checkValues()
 {
